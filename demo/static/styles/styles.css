@@ -1,4 +1,129 @@
-span {
+span,
+h1,
+h2 {
     font-style: italic;
     background-color: red;
+}
+ol li {
+  list-style-image: url(icon.png);
+  color: aqua;
+}
+li:hover{
+  filter: hue-rotate(90deg);
+}
+h1 a[href^='https']{
+  color: blue;
+}
+form[action$='.php']{
+  background-color: cyan;
+}
+h1 a:hover,a:hover{
+  color:silver; 
+}
+.mar{
+  border: 10px solid red;
+  margin: 30px;
+  width: 100px;
+  box-sizing: content-box;
+  position: fixed;
+}
+.item1{
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  float: left;
+}
+.item2{
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  float: right;
+}
+.item3{
+  height: 100px;
+  background-color: violet;
+
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline overline;
+}
+
+.but:focus{
+  outline: red solid 10px;
+}
+
+.round{
+  width: 100px;
+  height: 100px;
+  background-color: silver;
+  padding: 60px;
+  margin: 40px;
+  border-radius: 50px;
+}
+
+.wrapper{
+  min-height: 100vh;
+  width: 100%;
+
+ /* background-image: linear-gradient(45deg, yellow 25px, black 25px, black 50px, yellow 50px, yellow 75px, black 75px);*/
+  background: linear-gradient(45deg,yellow 25px, black 25px, black 50px, yellow 50px);
+}
+.trans{
+  margin: 40px;
+  width: 200px;
+  height: 200px;
+  background: aqua;
+  border: solid black 5px;
+  transition-duration: 500ms, 2s;
+  transition-property: transform, background;
+}
+.trans:hover{
+  background: radial-gradient(aqua,crimson);
+  transform: scale(0.5);
+}
+
+.trans2{
+  margin: 40px;
+  width: 200px;
+  height: 200px;
+  border: solid black 5px;
+  animation-play-state: paused;
+  animation-name: Anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.trans2:hover{
+  animation-play-state: running;
+}
+
+@keyframes Anim{
+  from{
+    background: olive;
+  }
+  25%{
+    background: linear-gradient(black,yellow);
+  }
+  50%{
+    transform: scale(1,4);
+  }
+  to{
+    background: white;
+    transform: scale(1,2);
+  }
+}
+
+table,
+table *{
+  border: solid black 5px;
+  margin-left: 40px;
+  max-width: 200px;
+  border-collapse: separate;
+  border-spacing: 10px;
+  text-align: center;
+  cursor: wait;
+}
+table caption{
+  margin-left: 0px;
 }
