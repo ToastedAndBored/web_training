@@ -127,3 +127,61 @@ table *{
 table caption{
   margin-left: 0px;
 }
+
+.cont{
+  border: 10px solid black;
+  display: flex;
+  flex-flow: row wrap;
+  height: 300px;
+  justify-content: space-between;
+}
+
+.items{
+  text-align: center;
+  background: crimson;
+  border: 5px red;
+  border-style: ridge;
+  padding: 20px;
+  width: calc(33.33% - 60px);
+  font: 500 60px normal;
+}
+
+.fitem1{
+  color: olive;
+  flex-shrink:3;
+}
+
+
+.cont2{
+  margin-top: 10px;
+  display:flex;
+  border: solid green 10px;
+  align-items: center;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height:200px;
+  align-content: space-between;
+}
+  
+.items2{
+  border: solid 5px black;
+  text-align: center;
+  color: white;
+  flex-basis: 100px;
+  flex-grow:3;
+  background: blue;
+  font: 500 60px normal;
+}
+
+.fitem21{
+  flex-shrink:3;
+}
+
+@media screen and (max-width: 600px){
+  .cont{
+    flex-direction: column-reverse;
+  }
+  .cont2{
+  flex-direction: row;
+  }
+}
