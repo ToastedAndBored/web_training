@@ -1,0 +1,57 @@
+body{
+  background: blue;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+.topmenu{
+  display: flex;
+  background: black;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 30px;
+  color: white;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+.submenu{
+  min-width:200px;
+  position: absolute;
+  z-index: 5;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  transition: linear .3s;
+  opacity: 0;
+}
+
+.topmenu li:hover > .submenu{
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+
+.submenu a{
+  border: 2px white solid;
+  font-size: 16px;
+  display:block;
+  padding: 10px 20px;
+}
+
+.submenu .submenu{
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transition: linear 0.5s;
+  visibility: hidden;
+}
+
+.submenu li{
+  position: relative;
+}
